@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+html {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 14px;
+}
+body {
+    overflow-x: hidden;   /* 스크롤 안생김 */
+    color: rgb(29,29,31);
+    letter-spacing: -0.05em; /* 자간(글자 간격) 설정 */
+    background: white;
+}
+p {
+    line-height: 1.6; /* 행간 설정 */
+}
+a {
+    color: rgb(29,29,31);
+    text-decoration: none; /* 밑줄 없애기 */
+}
+.global-nav {
+    padding: 0 1rem; /* 너무 화면 벽에 붙어있었음 */
+    height: 44px;
+}
+.local-nav {
+    height: 52px;
+    padding: 0 1rem;
+    border-bottom: 1px solid #ddd; /* 아래 연한 회색깔 보더 */
+}
+.global-nav-link,
+.local-nav-links {
+    /* 네비가 균일한 간격으로 이루어짐 flex의 justify-contents 이용 */
+    display: flex; /* 내용물마다 한줄 차지하지 않고 가로로 배치됨 */
+    align-items: center; /* 세로 정렬 */
+    max-width: 1000px; /* width 제한 */
+    height: 100%; /* 글자 크기가 아닌 부모의 크기 만큼 활용, height:44px 이렇게 해도 상관없긴함 */
+    margin: 0 auto; /* 센터 정렬, 좌우 auto */
+}
+.global-nav-link {
+    justify-content: space-between;  /* 가로 배치 정렬 */
+}
+/* margin 에 auto 가 들어가면 내가 가질 수 있는 여백,margin을 확 다씀  */
+/* ex) margin: 0 auto, 오른쪽 왼쪽의 margin을 다 쓰니 가운데로 정렬됨  */
+/* 태그보다 구체적인 클래스가 우선이다. */
+.local-nav-links .product-name {
+    margin-right: auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.local-nav-links a {
+    font-size: 0.8rem;
+}
+
+/* :not(.클래스)로 제외 시킬 수 있다 */
+.local-nav-links a:not(.product-name) {
+    margin-left: 2em;
+}
+.scroll-section {
+    padding-top: 50vh;
+}
+#scroll-section-0 h1 {
+    text-align: center;
+}
+.main-message {
+    
+}
